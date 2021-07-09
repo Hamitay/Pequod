@@ -1,4 +1,4 @@
-## ruilder
+## builder
 FROM golang:alpine as builder
 
 RUN apk update && apk add --no-cache git
@@ -6,15 +6,12 @@ WORKDIR $GOPATH/src/mypackage/app/
 COPY . .
 
 RUN go get
-RUN go build -o /go/bin/Pequod
-
-ENV DOCKER_HOST="unix:///var/run/docker.sock"
-ENTRYPOINT [ "/go/bin/Pequod" ]
+RUN CGO_ENABLED=0 go build -o /go/bin/Pequod
 
 
 ## runner
 FROM scratch
 
 COPY --from=builder /go/bin/Pequod /go/bin/Pequod
-RUN ls /go/bin
+ENV DOCKER_HOST="unix:///var/run/docker.sock"
 ENTRYPOINT ["/go/bin/Pequod"]
