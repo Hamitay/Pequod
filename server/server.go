@@ -1,62 +1,32 @@
 package server
 
 import (
-	"context"
+	"encoding/json"
 	"fmt"
 	"net/http"
 	"os"
 
-	"github.com/docker/docker/api/types"
-	"github.com/docker/docker/client"
+	"github.com/Hamitay/Pequod/containers"
 )
 
 const PORT = ":5000"
 
-func listContainers() []types.Container {
-	ctx := context.Background()
-	cli := getCliContext()
-	containers, err := cli.ContainerList(ctx, types.ContainerListOptions{})
-
-	if err != nil {
-		panic(err)
-	}
-
-	return containers
-}
-
-func getCliContext() *client.Client {
-	cli, err := client.NewClientWithOpts(client.FromEnv, client.WithAPIVersionNegotiation())
-
-	if err != nil {
-		panic(err)
-	}
-
-	return cli
-}
-
-func restartContainer(containerId string) {
-	ctx := context.Background()
-	cli := getCliContext()
-	cli.ContainerRestart(ctx, containerId, nil)
-}
-
 func handler(w http.ResponseWriter, r *http.Request) {
+	service := containers.ContainerServiceImpl{}
 
-	containers := listContainers()
+	containers := service.ListContainers()
 
-	containerList := ""
-
-	for _, container := range containers {
-		fmt.Printf("container: %v\n", container)
-		template := "<li>Image: <b>" + container.Image + "</b> Id: " + container.ID + "</li>\n"
-		containerList += template
+	containerList := make([]map[string]string, len(containers))
+	for i, container := range containers {
+		containerList[i] = container.ToMap()
 	}
 
-	output := "<ul>" + containerList + "</ul>"
-	w.Header().Set("Content-Type", "text/html; charset=utf-8")
+	jsonResponse(w, containerList)
+}
 
-	//restartContainer(containers[0].ID)
-	fmt.Fprintf(w, output)
+func jsonResponse(w http.ResponseWriter, payload interface{}) {
+	w.Header().Set("Content-Type", "application/json")
+	json.NewEncoder(w).Encode(payload)
 }
 
 func Startup() {
