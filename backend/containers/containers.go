@@ -1,6 +1,7 @@
 package containers
 
 import (
+	"bytes"
 	"context"
 	"fmt"
 
@@ -55,6 +56,50 @@ func (c *ContainerServiceImpl) RestartContainer(containerId string) {
 	ctx := context.Background()
 	cli := getCliContext()
 	cli.ContainerRestart(ctx, containerId, nil)
+}
+
+func (c *ContainerServiceImpl) GetContainerDetails(containerId string) types.ContainerJSON {
+	ctx := context.Background()
+	cli := getCliContext()
+
+	containerJson, err := cli.ContainerInspect(ctx, containerId)
+
+	if err != nil {
+		panic(err)
+	}
+
+	return containerJson
+}
+
+func (c *ContainerServiceImpl) GetContainerLogs(containerId string) string {
+	ctx := context.Background()
+	cli := getCliContext()
+
+	stream, err := cli.ContainerLogs(ctx, containerId, types.ContainerLogsOptions{ShowStdout: true})
+
+	if err != nil {
+		panic(err)
+	}
+
+	buf := new(bytes.Buffer)
+	buf.ReadFrom(stream)
+	stream.Close()
+
+	filteredBuffer := make([]byte, buf.Len())
+
+	j := 0
+	for buf.Len() != 0 {
+		b := buf.Next(8)
+		for _, bi := range b {
+			if bi > 5 {
+				filteredBuffer[j] = bi
+				j++
+			}
+		}
+	}
+
+	filteredString := string(filteredBuffer[:j])
+	return filteredString
 }
 
 func buildContainerEntityFromDockerContainer(dockerContainer types.Container) ContainerEntity {

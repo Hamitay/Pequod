@@ -1,0 +1,318 @@
+[2021-07-09 16:28:09.282] [enterprise_enrollment] [info] load: QuintoAndar: enrolled
+[2021-07-09 16:28:09.282] [poller::enterprise_enrollment] [info] Start polling (waiting 60000ms)
+[2021-07-09 16:28:09.399] [systemctl] [info] using /bin/systemctl
+inactive
+Saving logs
+(electron) The default value of app.allowRendererProcessReuse is deprecated, it is currently "false".  It will change to be "true" in Electron 9.  For more information please check https://github.com/electron/electron/issues/18397
+Loading file:///opt/access/resources/app.asar/index.html
+Waiting for app to be ready
+[2021-07-09 16:28:10.106] [Javascript] [info] [init::Logger]: Initialized$
+[2021-07-09 16:28:10.106] [Javascript] [info] [init::I18N]: Initializing$
+[2021-07-09 16:28:10.107] [Javascript] [info] [init::I18N]: Initialized$
+[2021-07-09 16:28:10.107] [Javascript] [info] [init::NotificationManager]: Initializing$
+[2021-07-09 16:28:10.107] [Javascript] [info] [init::Linking]: Initializing$
+[2021-07-09 16:28:10.108] [Javascript] [info] [init::Router]: Initializing$
+[2021-07-09 16:28:10.108] [Javascript] [info] [init::NotificationManager]: Initialized$
+[2021-07-09 16:28:10.108] [Javascript] [info] [init::Linking]: Initialized$
+[2021-07-09 16:28:10.108] [Javascript] [info] [init::Router]: Initialized$
+[2021-07-09 16:28:10.108] [Javascript] [info] [init::EnterpriseEnrollment]: Initializing$
+[2021-07-09 16:28:10.110] [Javascript] [info] [init::EnterpriseEnrollment::RequestUpdate::Poller 3a6d22]: Stopping$
+[2021-07-09 16:28:10.110] [Javascript] [info] [init::EnterpriseEnrollment]: Initialized$
+[2021-07-09 16:28:10.110] [Javascript] [info] [init::migrateKVStore]: Initializing$
+[2021-07-09 16:28:10.111] [Javascript] [info] [init::migrateKVStore]: Initialized$
+[2021-07-09 16:28:10.111] [Javascript] [info] [init::migrateRealmMigrator]: Initializing$
+[2021-07-09 16:28:10.111] [Javascript] [info] [init::migrateRealmMigrator]: Initialized$
+[2021-07-09 16:28:10.111] [Javascript] [info] [init::App.setReady]: Initializing$
+[2021-07-09 16:28:10.111] [Javascript] [info] [init::App.setReady]: Initialized$
+Window is ready
+Forwarding logs to renderer
+[2021-07-09 16:28:10.111] [Javascript] [info] [store]: Stored state: $, {"appState":"{\"debugMenuEnabled\":false,\"logLevel\":\"debug\",\"notificationPermissions\":true,\"onboardingCompleted\":true,\"useLessCellularData\":true}","notifications":"{\"unseen\":567}","tunnel":"{\"categoryWhitelist\":{},\"error\":false,\"errorLabel\":\"none\",\"lastDisconnected\":1606938592900,\"status\":\"connected\",\"switchEnabled\":true,\"switchValue\":true,\"tunnelConfiguration\":{},\"vpnConfigurationStatus\":\"allowed\"}","_persist":"{\"version\":-1,\"rehydrated\":true}"}
+[2021-07-09 16:28:10.114] [Javascript] [info] [store]: Store is ready: $, {
+  "appState": {
+    "debugMenuEnabled": false,
+    "logLevel": "debug",
+    "notificationPermissions": true,
+    "onboardingCompleted": true,
+    "state": "active",
+    "tunnelFile": {
+      "end": true,
+      "path": null
+    },
+    "useLessCellularData": true
+  },
+  "enterpriseEnrollment": {
+    "configuration": {
+      "app_configuration": {
+        "contact_admin_action": "",
+        "history_screen_disabled": false,
+        "vpn_icon_hidden": false
+      },
+      "auth_token": "",
+      "tenant_id": "",
+      "tenant_name": ""
+    },
+    "status": "init"
+  },
+  "notifications": {
+    "unseen": 567
+  },
+  "tunnel": {
+    "categoryWhitelist": {},
+    "error": false,
+    "errorLabel": "none",
+    "lastDisconnected": 1606938592900,
+    "status": "connected",
+    "switchEnabled": true,
+    "switchValue": true,
+    "tunnelConfiguration": {},
+    "vpnConfigurationStatus": "allowed"
+  },
+  "_persist": {
+    "version": -1,
+    "rehydrated": true
+  }
+}
+[2021-07-09 16:28:10.128] [analytics] [info] Sending analytics event UID 617ea5d0-b1a3-4c01-8aa9-ef8abc1dd9e1
+[2021-07-09 16:28:10.128] [Javascript] [info] [sagas::appState]: Logger initialized with level: debug$
+[2021-07-09 16:28:10.133] [Javascript] [info] [sagas::enterpriseEnrollment]: Initializing$, enrolled, {
+  "analytics": {
+    "sinks": []
+  },
+  "analytics_url": "https://analytics.tech.fyde.com",
+  "app_configuration": {
+    "contact_admin_action": "",
+    "dns_servers": {
+      "list": "8.8.8.8",
+      "protocol": "plain"
+    },
+    "enrollment_polling_time_in_seconds": 600,
+    "history_screen_disabled": false,
+    "vpn_icon_hidden": false
+  },
+  "auth_token": "JAsmyqDqdiZuDHVgwK8zhoWV",
+  "authn_req": "webview",
+  "device_status": "enabled",
+  "domain_lists_manifest_url": "https://enterprise.fyde.com/clients/v1/tenants/eb292a27-4db9-4f2f-8201-e376a5832c43/manifest",
+  "domain_lists_polling_time": 0,
+  "last_authn_at": 1625752927,
+  "resources_db_url": "https://enterprise.fyde.com/clients/v4/access_resources",
+  "tenant_id": "eb292a27-4db9-4f2f-8201-e376a5832c43",
+  "tenant_name": "QuintoAndar",
+  "user_email": "henrique.amitay@quintoandar.com.br"
+}
+[2021-07-09 16:28:10.145] [analytics] [info] Sending analytics event UID f31184db-28b6-4c28-a8f8-743e448bf466
+[2021-07-09 16:28:10.145] [Javascript] [info] [MainProcess::bootstrap::logging]: (OLD) Saving logs$
+[2021-07-09 16:28:10.145] [Javascript] [info] [MainProcess::bootstrap::window]: (OLD) Loading file:///opt/access/resources/app.asar/index.html$
+[2021-07-09 16:28:10.145] [Javascript] [info] [MainProcess::bootstrap::window]: (OLD) Waiting for app to be ready$
+[2021-07-09 16:28:10.145] [Javascript] [info] [MainProcess::bootstrap::window]: (OLD) Window is ready$
+[2021-07-09 16:28:10.145] [Javascript] [info] [MainProcess::bootstrap]: App called with the following argv$, [
+  "/opt/access/cgaccess"
+]
+[2021-07-09 16:28:10.148] [Javascript] [info] [router]: REPLACE: {"pathname":"/overview","search":"","hash":""}$
+[2021-07-09 16:28:10.189] [Javascript] [debug] [NotificationManager::EventBus e2bcaf]: Registering listener 0$, {
+  "listeners": [
+    [
+      0,
+      null
+    ]
+  ]
+}
+[2021-07-09 16:28:10.204] [Javascript] [debug] [NativeModules::SecurityChecks::EventBus 643e8]: Registering listener 0$, {
+  "listeners": [
+    [
+      0,
+      null
+    ]
+  ]
+}
+[2021-07-09 16:28:10.206] [Javascript] [info] [NativeModules::SecurityChecks]: Loaded state: $, {
+  "lastRan": 1625592456000,
+  "results": {
+    "anomalies": {
+      "jailbreak": {
+        "result": "passed",
+        "state": "completed"
+      }
+    },
+    "device": {
+      "screen_lock_enabled": {
+        "result": "passed",
+        "state": "completed"
+      }
+    },
+    "network": {
+      "dns": {
+        "result": "passed",
+        "state": "completed"
+      },
+      "mitm": {
+        "result": "passed",
+        "state": "completed"
+      }
+    }
+  },
+  "state": "completed",
+  "trigger": "manual"
+}
+[2021-07-09 16:28:10.207] [Javascript] [debug] [sagas::tunnel]: starting listener$
+[2021-07-09 16:28:10.226] [Javascript] [debug] [sagas::tunnel]: whitelist loaded$, []
+[2021-07-09 16:28:14.740] [Javascript] [info] [sagas::tunnel]: status changed: to connected$
+[2021-07-09 16:28:24.377] [Javascript] [info] [MainProcess::bootstrap::notifications]: Got notification (access_proxy)$
+[2021-07-09 16:28:25.358] [Javascript] [info] [MainProcess::bootstrap::notifications]: Notification was clicked (access_proxy)$
+[2021-07-09 16:28:25.382] [Javascript] [info] [sagas::systemNotifications]: Received notification with type: access_proxy$
+[2021-07-09 16:28:25.385] [Javascript] [info] [router]: PUSH: {"pathname":"/notifications","search":"","hash":""}$
+[2021-07-09 16:28:25.401] [Javascript] [info] [router]: PUSH: {"pathname":"/notifications/details/{\"params\":{\"body\":\"{\\\"admittance_type\\\":\\\"denied\\\",\\\"remediations\\\":[{\\\"steps\\\":[{\\\"auth_url\\\":\\\"https:%2F%2Fenterprise.fyde.com%2Fsso%2Fstart%3Fauth_attempt=6c546c34-2640-45df-bd62-8395c965f328\\\",\\\"remediable\\\":true,\\\"type\\\":\\\"reauth_required\\\"}]}],\\\"resource_domain\\\":\\\"qli.quintoandar.com.br\\\",\\\"resource_id\\\":\\\"\\\",\\\"resource_name\\\":\\\"\\\",\\\"type\\\":\\\"access_proxy\\\",\\\"uuid\\\":\\\"13749917-428d-4cde-9617-6f62a73568ff\\\"}\",\"type\":\"access_proxy\",\"uuid\":\"13749917-428d-4cde-9617-6f62a73568ff\"}}","search":"","hash":""}$
+[2021-07-09 16:28:25.403] [Javascript] [debug] [NativeModules::SecurityChecks::EventBus 643e8]: Removing listener 0$
+[2021-07-09 16:28:25.406] [Javascript] [info] [sagas::enterpriseEnrollment]: Requesting update$
+[2021-07-09 16:28:25.406] [poller::enterprise_enrollment] [info] Start polling (waiting 60000ms)
+[2021-07-09 16:28:25.406] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 16:28:25.408] [Javascript] [debug] [NotificationManager::EventBus e2bcaf]: Removing listener 0$
+[2021-07-09 16:28:25.409] [Javascript] [info] [sagas::enterpriseEnrollment]: Requesting update$
+[2021-07-09 16:28:26.033] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 16:28:26.034] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 16:28:26.034] [poller::enterprise_enrollment] [info] Start polling (waiting 60000ms)
+[2021-07-09 16:28:26.034] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 16:28:26.772] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 16:28:26.773] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 16:28:26.773] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+Opening in existing browser session.
+[2021-07-09 16:38:26.773] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 16:38:27.050] [Javascript] [info] [MainProcess::bootstrap::notifications]: Got notification (access_proxy)$
+[2021-07-09 16:38:27.050] [Javascript] [info] [MainProcess::bootstrap::notifications]: Got notification (access_proxy)$
+[2021-07-09 16:38:27.057] [Javascript] [info] [MainProcess::bootstrap::notifications]: Got notification (access_proxy)$
+[2021-07-09 16:38:35.659] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 16:38:35.660] [enterprise_enrollment] [info] enrollment config changed.<Context>[{"op":"replace","path":"/last_authn_at","value":1625858920}]</Context>
+[2021-07-09 16:38:35.660] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 16:38:35.660] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 16:38:35.706] [Javascript] [info] [sagas::enterpriseEnrollment::watchStatusChanges]: got status update event$
+[2021-07-09 16:38:35.710] [Javascript] [info] [sagas::enterpriseEnrollment::watchStatusChanges]: calling reloadEnterpriseEnrollment$
+[2021-07-09 16:38:35.711] [analytics] [info] Sending analytics event UID 52abf7f4-e778-4583-8bcb-17ad55da8d34
+[2021-07-09 16:48:35.660] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 16:48:36.440] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 16:48:36.440] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 16:48:36.440] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 16:54:38.330] [Javascript] [info] [sagas::tunnel]: status changed: to disconnected$
+Warning: The unit file, source configuration file or drop-ins of access-tunnel.service changed on disk. Run 'systemctl --user daemon-reload' to reload units.
+[2021-07-09 16:54:38.371] [Javascript] [info] [sagas::tunnel]: status changed: to connected$
+[2021-07-09 16:58:36.440] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 16:58:36.998] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 16:58:36.998] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 16:58:36.998] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 17:08:36.999] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 17:08:37.687] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 17:08:37.687] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 17:08:37.687] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 17:18:37.688] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 17:18:38.415] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 17:18:38.415] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 17:18:38.415] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 17:24:38.858] [Javascript] [info] [sagas::tunnel]: status changed: to disconnected$
+[2021-07-09 17:24:39.088] [Javascript] [info] [sagas::tunnel]: status changed: to connected$
+[2021-07-09 17:28:38.415] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 17:28:39.105] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 17:28:39.105] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 17:28:39.105] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 17:38:39.105] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 17:38:39.702] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 17:38:39.703] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 17:38:39.703] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 17:48:39.703] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 17:48:40.293] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 17:48:40.294] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 17:48:40.294] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 17:54:38.058] [Javascript] [info] [sagas::tunnel]: status changed: to disconnected$
+[2021-07-09 17:54:41.370] [Javascript] [info] [sagas::tunnel]: status changed: to connected$
+[2021-07-09 17:58:40.294] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 17:58:40.775] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 17:58:40.776] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 17:58:40.776] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 18:08:40.776] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 18:08:55.800] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 18:08:55.800] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 18:08:55.800] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 18:18:55.801] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 18:18:56.609] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 18:18:56.610] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 18:18:56.610] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 18:23:47.032] [Javascript] [info] [MainProcess::bootstrap::notifications]: Got notification (access_proxy)$
+[2021-07-09 18:23:47.033] [Javascript] [info] [MainProcess::bootstrap::notifications]: Notification was closed (access_proxy)$
+[2021-07-09 18:23:47.033] [Javascript] [info] [MainProcess::bootstrap::notifications]: Got notification (access_proxy)$
+[2021-07-09 18:23:47.065] [Javascript] [info] [MainProcess::bootstrap::notifications]: Notification was closed (access_proxy)$
+[2021-07-09 18:24:15.176] [Javascript] [info] [MainProcess::bootstrap::notifications]: Got notification (access_proxy)$
+[2021-07-09 18:28:01.617] [Javascript] [info] [sagas::tunnel]: status changed: to disconnected$
+[2021-07-09 18:28:01.832] [Javascript] [info] [sagas::tunnel]: status changed: to connected$
+[2021-07-09 18:28:56.610] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 18:29:02.011] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 18:29:02.011] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 18:29:02.011] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 18:39:02.011] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 18:39:03.967] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 18:39:03.968] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 18:39:03.968] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 18:49:03.968] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 18:49:04.881] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 18:49:04.881] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 18:49:04.881] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 18:54:43.768] [Javascript] [info] [sagas::tunnel]: status changed: to disconnected$
+[2021-07-09 18:54:44.069] [Javascript] [info] [sagas::tunnel]: status changed: to connected$
+[2021-07-09 18:59:04.881] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 18:59:05.884] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 18:59:05.884] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 18:59:05.884] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 19:09:05.884] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 19:09:07.010] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 19:09:07.010] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 19:09:07.010] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 19:19:07.010] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 19:19:07.838] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 19:19:07.838] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 19:19:07.838] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 19:24:40.525] [Javascript] [info] [sagas::tunnel]: status changed: to disconnected$
+Warning: The unit file, source configuration file or drop-ins of access-tunnel.service changed on disk. Run 'systemctl --user daemon-reload' to reload units.
+[2021-07-09 19:24:43.608] [Javascript] [info] [sagas::tunnel]: status changed: to connected$
+[2021-07-09 19:29:07.838] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 19:29:08.503] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 19:29:08.504] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 19:29:08.504] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 19:39:08.504] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 19:39:09.598] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 19:39:09.598] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 19:39:09.598] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 19:49:09.598] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 19:49:10.279] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 19:49:10.279] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 19:49:10.279] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 19:54:38.302] [Javascript] [info] [sagas::tunnel]: status changed: to disconnected$
+Warning: The unit file, source configuration file or drop-ins of access-tunnel.service changed on disk. Run 'systemctl --user daemon-reload' to reload units.
+[2021-07-09 19:54:38.512] [Javascript] [info] [sagas::tunnel]: status changed: to connected$
+[2021-07-09 19:59:10.280] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 19:59:11.304] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 19:59:11.304] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 19:59:11.304] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 20:09:11.304] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 20:09:12.120] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 20:09:12.120] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 20:09:12.120] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 20:19:12.120] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 20:19:12.874] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 20:19:12.874] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 20:19:12.874] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 20:24:53.300] [Javascript] [info] [sagas::tunnel]: status changed: to disconnected$
+Warning: The unit file, source configuration file or drop-ins of access-tunnel.service changed on disk. Run 'systemctl --user daemon-reload' to reload units.
+[2021-07-09 20:24:53.605] [Javascript] [info] [sagas::tunnel]: status changed: to connected$
+[2021-07-09 20:29:12.875] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 20:29:14.085] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 20:29:14.086] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 20:29:14.086] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 20:39:14.086] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 20:39:15.122] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 20:39:15.122] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 20:39:15.122] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 20:49:15.122] [poller::enterprise_enrollment] [info] Running polling function
+[2021-07-09 20:49:15.881] [enterprise_enrollment] [info] updating enrollment config
+[2021-07-09 20:49:15.881] [poller::enterprise_enrollment] [info] Polling function completed. Success: true
+[2021-07-09 20:49:15.881] [poller::enterprise_enrollment] [info] Scheduled next poll in 600000ms, (backoff == false)
+[2021-07-09 20:54:43.918] [Javascript] [info] [sagas::tunnel]: status changed: to disconnected$
+[2021-07-09 20:54:44.127] [Javascript] [info] [sagas::tunnel]: status changed: to connected$
+[2021-07-09 20:57:40.392] [Javascript] [info] [bootstrap::logging]: Set Native Logger as sink$
+Warning: The unit file, source configuration file or drop-ins of access-tunnel.service changed on disk. Run 'systemctl --user daemon-reload' to reload units.
