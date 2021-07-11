@@ -2,7 +2,7 @@ import React from 'react';
 import { AppBar, Box, Grid, Typography } from '@material-ui/core';
 import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat';
 
-const TITLE = "Pequod"
+const TITLE = "Pequod v0.1"
 
 export const PequodAppBar = () => (
   <AppBar position="static">

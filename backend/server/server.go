@@ -26,7 +26,6 @@ func handleListContainer(c *gin.Context) {
 		containerList[i] = container.ToMap()
 	}
 
-	// Todo isolate to middleware
 	c.JSON(200, containerList)
 }
 
@@ -46,12 +45,21 @@ func handleGetContainerDetails(c *gin.Context) {
 	c.JSON(200, response)
 }
 
+func handleRestartContainer(c *gin.Context) {
+	service := containers.ContainerServiceImpl{}
+	containerId := c.Param("id")
+	service.RestartContainer(containerId)
+
+	c.Done()
+}
+
 func Startup() {
 	fmt.Fprintf(os.Stdout, "Web Server started. Listening on port: %s\n", PORT)
 
 	router := gin.Default()
 	router.Use(corsMiddleware())
 	router.GET("/containers", handleListContainer)
+	router.POST("/containers/restart/:id", handleRestartContainer)
 	//router.GET("/containers/:id", handleGetContainerDetails)
 	router.Run(PORT)
 }
