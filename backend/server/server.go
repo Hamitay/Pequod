@@ -52,7 +52,6 @@ func Startup() {
 	router := gin.Default()
 	router.Use(corsMiddleware())
 	router.GET("/containers", handleListContainer)
-	router.GET("/containers/:id", handleGetContainerDetails)
-
+	//router.GET("/containers/:id", handleGetContainerDetails)
 	router.Run(PORT)
 }
