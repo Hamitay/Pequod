@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/Hamitay/Pequod/containers"
+	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
 )
 
@@ -58,8 +59,8 @@ func Startup() {
 
 	router := gin.Default()
 	router.Use(corsMiddleware())
+	router.Use(static.ServeRoot("/", "./build"))
 	router.GET("/containers", handleListContainer)
 	router.POST("/containers/restart/:id", handleRestartContainer)
-	//router.GET("/containers/:id", handleGetContainerDetails)
 	router.Run(PORT)
 }
