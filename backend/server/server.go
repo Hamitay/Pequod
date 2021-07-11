@@ -10,6 +10,12 @@ import (
 
 const PORT = ":5000"
 
+func corsMiddleware() gin.HandlerFunc {
+	return func(c *gin.Context) {
+		c.Header("Access-Control-Allow-Origin", c.Request.Header.Get("Origin"))
+	}
+}
+
 func handleListContainer(c *gin.Context) {
 	service := containers.ContainerServiceImpl{}
 
@@ -21,7 +27,6 @@ func handleListContainer(c *gin.Context) {
 	}
 
 	// Todo isolate to middleware
-	enableCors(c)
 	c.JSON(200, containerList)
 }
 
@@ -38,21 +43,16 @@ func handleGetContainerDetails(c *gin.Context) {
 	response["details"] = details
 	response["logs"] = logs
 
-	enableCors(c)
 	c.JSON(200, response)
-}
-
-func enableCors(c *gin.Context) {
-	c.Header("Access-Control-Allow-Origin", c.Request.Header.Get("Origin"))
 }
 
 func Startup() {
 	fmt.Fprintf(os.Stdout, "Web Server started. Listening on port: %s\n", PORT)
 
 	router := gin.Default()
-
+	router.Use(corsMiddleware())
 	router.GET("/containers", handleListContainer)
-	router.GET("/container/:id", handleGetContainerDetails)
+	router.GET("/containers/:id", handleGetContainerDetails)
 
 	router.Run(PORT)
 }

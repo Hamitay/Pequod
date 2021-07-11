@@ -18,6 +18,7 @@ type ContainerEntity struct {
 	name  string
 	id    string
 	image string
+	state string
 }
 
 func (ce *ContainerEntity) String() string {
@@ -29,6 +30,7 @@ func (ce *ContainerEntity) ToMap() map[string]string {
 		"name":  ce.name,
 		"id":    ce.id,
 		"image": ce.image,
+		"state": ce.state,
 	}
 }
 
@@ -103,7 +105,7 @@ func (c *ContainerServiceImpl) GetContainerLogs(containerId string) string {
 }
 
 func buildContainerEntityFromDockerContainer(dockerContainer types.Container) ContainerEntity {
-	return ContainerEntity{dockerContainer.Names[0], dockerContainer.ID, dockerContainer.Image}
+	return ContainerEntity{dockerContainer.Names[0], dockerContainer.ID, dockerContainer.Image, dockerContainer.State}
 }
 
 func getCliContext() *client.Client {

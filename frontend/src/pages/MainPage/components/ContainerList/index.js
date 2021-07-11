@@ -1,16 +1,15 @@
 import React, { Fragment } from 'react';
+import { Box } from '@material-ui/core'
 import ContainerItem from '../ContainerItem';
-
-import List from '@material-ui/core/List';
 
 const ContainerList = ({ containers }) => {
   return (
     <Fragment>
-      <List>
-        {containers.map((container) => (
-          <ContainerItem container={container} />
+      {containers.map((container) => (
+          <Box key={container.id} m={1}>
+            <ContainerItem key={container.id} container={container} />
+          </Box>
         ))}
-      </List>
     </Fragment>
   );
 };
