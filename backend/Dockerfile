@@ -13,5 +13,7 @@ RUN CGO_ENABLED=0 go build -o /go/bin/Pequod
 FROM scratch
 
 COPY --from=builder /go/bin/Pequod /go/bin/Pequod
+COPY ./build /go/bin/build
+WORKDIR /go/bin/
 ENV DOCKER_HOST="unix:///var/run/docker.sock"
 ENTRYPOINT ["/go/bin/Pequod"]

@@ -50,7 +50,7 @@ func handleRestartContainer(c *gin.Context) {
 	service := containers.ContainerServiceImpl{}
 	containerId := c.Param("id")
 	service.RestartContainer(containerId)
-
+	fmt.Println("oi")
 	c.Done()
 }
 
@@ -60,7 +60,7 @@ func Startup() {
 	router := gin.Default()
 	router.Use(corsMiddleware())
 	router.Use(static.ServeRoot("/", "./build"))
-	router.GET("/containers", handleListContainer)
 	router.POST("/containers/restart/:id", handleRestartContainer)
+	router.GET("/containers", handleListContainer)
 	router.Run(PORT)
 }
